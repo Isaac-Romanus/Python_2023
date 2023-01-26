@@ -1,15 +1,17 @@
 # Uppgift 1.1.3
 
+# Getting the full name and age of three individuals as string
 individ0 = str(input("Fullständigt namn och ålder på person ett, separerat av \",\" Ex Anna Karlsson,24: "))
 individ1 = str(input("Fullständigt namn och ålder på person två, separerat av \",\" Ex Anna Karlsson,24: "))
 individ2 = str(input("Fullständigt namn och ålder på person tre, separerat av \",\" Ex Anna Karlsson,24: "))
 
+# Spliting the full name and age into lists (with two entries)
 individ0 = individ0.split(",")
 individ1 = individ1.split(",")
 individ2 = individ2.split(",")
 
-table = [individ0, individ1, individ2]
 
+# Setup and printing of e pretty table with f-strings
 gap =" "*3 # Anger avståndet mellan kategorier
 heading = ["No", "Name", "Age"]
 numbering = [1, 2, 3]
