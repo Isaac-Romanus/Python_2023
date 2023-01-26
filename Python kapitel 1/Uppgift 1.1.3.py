@@ -1,30 +1,27 @@
 # Uppgift 1.1.3
 
-name = str(input("Ange tre namn:"))
-surname = str(input("Ange deras efternamn:"))
-age = str(input("Ange deras ålder antal "))
+individ0 = str(input("Fullständigt namn och ålder på person ett, separerat av \",\" Ex Anna Karlsson,24: "))
+individ1 = str(input("Fullständigt namn och ålder på person två, separerat av \",\" Ex Anna Karlsson,24: "))
+individ2 = str(input("Fullständigt namn och ålder på person tre, separerat av \",\" Ex Anna Karlsson,24: "))
 
-namelist = name.split()
-surnamelist = surname.split()
-agelist = age.split()
+individ0 = individ0.split(",")
+individ1 = individ1.split(",")
+individ2 = individ2.split(",")
 
-individ0 = [namelist[0], surnamelist[0], agelist[0]]
-individ1 = [namelist[1], surnamelist[1], agelist[1]]
-individ2 = [namelist[2], surnamelist[2], agelist[2]]
-
-"""
-headings = ["Name", "Surname", "Age"]
-data = [individ0, individ1, individ2]
-format_row = "{:<12}" * (len(headings) + 1)
-print(format_row.format("", *headings))
-for headin, row in zip(headings, data):
-    print(format_row.format(headin, *row))
-"""
 table = [individ0, individ1, individ2]
-print("| {:^10} | {:^10} | {:^10} |".format("name", "surname", "age"))
-for nme, v in zip(table).items():
-    surnme, ag = v
-    print("| {:^10} | {:^10} | {:^10} |".format(nme, surnme, ag))
 
-for align, text in zip('<^>', ['left', 'center', 'right']):
-    '{0:{fill}{align}16}'.format(text, fill=align, align=align)
+gap =" "*3 # Anger avståndet mellan kategorier
+heading = ["No", "Name", "Age"]
+numbering = [1, 2, 3]
+
+print("="*33)
+print(f"{heading[0]:3s}{gap}{heading[1]:20s}{gap}{heading[2]:4s}")
+print("-"*33)
+print(f"{numbering[0]:^3d}{gap}{individ0[0]:20s}{gap}{individ0[1]:>4s}")
+print(f"{numbering[1]:^3d}{gap}{individ1[0]:20s}{gap}{individ1[1]:>4s}")
+print(f"{numbering[2]:^3d}{gap}{individ2[0]:20s}{gap}{individ2[1]:>4s}")
+print("-"*33)
+
+# d för integer, s för string och f för float
+# Pilarna anger aligment
+# Komman kan användas för att få uppdelade stora siffror ex 12,345,000
