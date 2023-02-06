@@ -16,6 +16,6 @@ print(f"Medelvärdet är: {mean}\
       Högsta värdet är: {max}\
       Minsta värdet är: {min}")
 
-
+# list() skapar en lista
 # map() funktionen ger en map av ett objekt (vilket är en iterator)
 # efter att ha appliceras den givna funktionen på varje item.
