@@ -30,3 +30,5 @@ while more != False:
     print(f"Antal individer angivna är: {count} \nDeras medelålder är: {age_avg}\n"\
           f"Äldsta individen är: {name} som är {age} år \n")
 print("Programmet har upphört")
+
+# .Split() ger: en lista 
