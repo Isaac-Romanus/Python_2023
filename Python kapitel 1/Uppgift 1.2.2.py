@@ -1,7 +1,7 @@
 # Uppgift 1.2.2
 
 # Getting a string from user, blended with letters and numbers
-value_str = input("Ange en stärng med siffror och bokstäver")
+value_str = input("Ange en stärng med siffror och bokstäver: ")
 value_length = len(value_str)
 
 # Filtering out the letters and numbers from original string

@@ -27,6 +27,8 @@ while more != False:
     age_avg = sum_age / count
 
     # Print för varje iteration av loopen
-    print(f"Antal individer angivna är: {count} \n Deras medelålder är: {age_avg}\n"\
+    print(f"Antal individer angivna är: {count} \nDeras medelålder är: {age_avg}\n"\
           f"Äldsta individen är: {name} som är {age} år \n")
 print("Programmet har upphört")
+
+# .Split() ger: en lista 
