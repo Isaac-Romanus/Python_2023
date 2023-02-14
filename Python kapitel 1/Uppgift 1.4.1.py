@@ -1,4 +1,9 @@
 # Uppgift 1.4.1
+# (1p): Skriv ett program i vilket en användare anger ett namn och ålder för en 
+# person. Efter varje inmatning skriver ut programmet medelålder för alla inmatade personer 
+# tillsammans med den äldsta personens namn och ålder. Användaren har en möjligt att avsluta 
+# inmatningen på ett lämpligt sä
+
 
 # Införskaffande av variabler och namngivning
 name_age = input("Ange Namn och ålder separerat av ett \",\": ")
@@ -14,6 +19,7 @@ while more != False:
     name_age = input("Ange nästa individ på samma sätt som tidigare, eller \"stop\": ")
     if name_age == "stop":
         break
+        # alternativt more = False, då får man bara en repetition av senaste
     name_age_list = name_age.split(",")
     count += 1
 

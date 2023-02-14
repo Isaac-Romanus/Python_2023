@@ -12,3 +12,5 @@ for i in range(n):
     l.append(a + value*i)
 
 print(f"De ekvidistanta punkterna är: {l}")
+# Range tar bara int. men behöver float för att ge bra svar. List är mutable och tuple är imutable
+# append för att lägga till

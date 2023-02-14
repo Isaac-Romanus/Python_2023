@@ -9,5 +9,6 @@ l = [i for i in range(1, number+1) if not number%i]
 print(f"De positiva delarna till {number} är: {l}")
 
 # for i in range(först, sist, steg):
-# List comprehension
+# List comprehension - skapa listor efter funktion eller applicera funktion på lista
+# "not" ger True om False
 
