@@ -1,4 +1,4 @@
-# Uppgift 2.2.1
+# Uppgift 2.2.1 - ej klar
 
 # (1p): Skriv en rekursiv funktion som returnerar n:te elementet i en geometrisk följd. Funktionen
 #  antar tre argument, a1, q, och n. Elementet med ordningsnumret n beräknas som an = a1 * qn-1.
