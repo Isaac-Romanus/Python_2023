@@ -25,7 +25,7 @@ def sum_kvadrat(*arg):
             sum += i**2
         return sum
 
-
 print(sum_kvadrat())
-        
+
+# Stjärnan innan "arg" indikerar att det kan komma fler variabler. Tar det som en tuple
         
