@@ -5,23 +5,32 @@
 # andra skriver ut matriserna som finns i filen. Matriser skall skrivas ut som formaterade
 # tabeller. Demonstrera användning av funktionerna
 import numpy as np
+from tabulate import tabulate
 
 def matrix_add(filename, a = 3, b = 3):
     # The fuction will add a matrix to the given file, wiping the previous content
     f = open(filename, "w+")
     l = [[1,2,3], [4,5,6],[7,8,9]]
-    m = np.array(l)
+    m = l
 
-    print(f"\n", m, file = f)
-
-
-    #for i in len(m):
-     #   for j in len(m):
-      #      print(f"{m}")
+    for i in range(len(m)):
+        for j in range(len(m[0])):
+            if j + 1 == len(m[0]):
+                print(f"{int(m[i][j])}", file=f)
+            else:
+                print(f"{int(m[i][j])},", end="", file=f)
+        # print(f"{m[i]}", file=f)
+    
 
 def matrix_print(filename):
-    asf = 0
+    f = open(filename, "r+")
+
+    # Creating a 2 dimentional list and printing it with tabulate
+    m = [[int(i) for i in line.split(",")] for line in f]
+    print(tabulate(m))
+
 
 # Testing the functions
-
 matrix_add("test2.txt")
+matrix_print("test2.txt")
+
