@@ -1,4 +1,4 @@
-# Uppgift 2.2.1 - ej klar
+# Uppgift 2.2.1
 
 # (1p): Skriv en rekursiv funktion som returnerar n:te elementet i en geometrisk 
 # följd. Funktionen antar tre argument, a1, q, och n. Elementet med ordningsnumret 
