@@ -11,12 +11,6 @@ def talföljd(a1, q, n):
         an = a1 * q*talföljd(1, q, n-1)
         return an
 
-
-
-#    an = a1 * q**(n - 1)
-#    return an
-    
-    
-
+# Testar om talföljd retunerar rätt svar
 test = talföljd(4, 2, 3)
 print(test)

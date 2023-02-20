@@ -42,7 +42,7 @@ def bas_omskriv(tal, bas):
     
     return new_number
  
-test = bas_omskriv(10,2)
+test = bas_omskriv(32,16)
 
 print(test)
 
