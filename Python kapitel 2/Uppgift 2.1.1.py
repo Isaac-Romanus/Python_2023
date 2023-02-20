@@ -8,7 +8,7 @@ def bas_omskriv(tal, bas):
     pos = 0
     
     while int(tal) > 0:
-        new_number_l.append(str(tal%bas))
+        new_number_l.append(str(tal%bas)) # Adds the remainder after division to a list
         tal = tal // bas
         pos += 1
         
@@ -42,7 +42,7 @@ def bas_omskriv(tal, bas):
     
     return new_number
  
-test = bas_omskriv(32,16)
+test = bas_omskriv(43,16)
 
 print(test)
 

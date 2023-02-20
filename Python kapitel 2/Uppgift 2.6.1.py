@@ -10,8 +10,7 @@ from tabulate import tabulate
 def matrix_add(filename, a = 3, b = 3):
     # The fuction will add a matrix to the given file, wiping the previous content
     f = open(filename, "w+")
-    l = [[1,2,3], [4,5,6],[7,8,9]]
-    m = l
+    l = [[1,2,3], [4,5,6],[7,8,9]] 
 
     for i in range(len(m)):
         for j in range(len(m[0])):
@@ -19,8 +18,7 @@ def matrix_add(filename, a = 3, b = 3):
                 print(f"{int(m[i][j])}", file=f)
             else:
                 print(f"{int(m[i][j])},", end="", file=f)
-        # print(f"{m[i]}", file=f)
-    
+
 
 def matrix_print(filename):
     f = open(filename, "r+")

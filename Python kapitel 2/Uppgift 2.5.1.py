@@ -23,7 +23,7 @@ while True:
     if u_choice == 1:
         f_out = open("test.txt", "a")
         add = str(input("Skriv det du vill lägga till denna nya raden: "))
-        print(f"{add}",file=f_out)
+        print(f"\n{add}",file=f_out)
         f_out.close()
 
     # Writing over the file

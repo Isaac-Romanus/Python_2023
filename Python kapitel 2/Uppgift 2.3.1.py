@@ -25,7 +25,8 @@ def sum_kvadrat(*arg):
             sum += i**2
         return sum
 
-print(sum_kvadrat())
+print(sum_kvadrat(1,2,3))
 
 # Stjärnan innan "arg" indikerar att det kan komma fler variabler. Tar det som en tuple
+# if all- som funktion elements är int eller float - till en boolean
         
