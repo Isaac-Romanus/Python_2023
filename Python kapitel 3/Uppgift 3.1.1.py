@@ -12,8 +12,16 @@ import numpy as np
 
 v = np.linspace(12, 18, 200)
 
-# Sumering av en selection av alla tal i v som har index delbart med 2 (jämna)
+# Sum of all even-index numbers after selection
 print(sum([i for ind, i in enumerate(v) if not ind%2]))
 
+# Sum of all odd-index numbers after selection
+print(sum([i for ind, i in enumerate(v) if ind%2]))
+
+# alla element vars index är delbart med 10
+print(sum([i for ind, i in enumerate(v) if not ind%10]))
+
+# 4) elementen med indexen 2, 5, 19, 92 
+print(len([i for ind, i in enumerate(v) if ind == 2 or ind == 5 or ind == 19 or ind == 92]))
 
 # Enumerate() ger en enumerating objekt vilket är objektet och en counter (index)
