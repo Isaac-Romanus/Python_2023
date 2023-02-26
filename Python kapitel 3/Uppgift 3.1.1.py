@@ -22,6 +22,6 @@ print(sum([i for ind, i in enumerate(v) if ind%2]))
 print(sum([i for ind, i in enumerate(v) if not ind%10]))
 
 # 4) elementen med indexen 2, 5, 19, 92 
-print(len([i for ind, i in enumerate(v) if ind == 2 or ind == 5 or ind == 19 or ind == 92]))
+print(sum([i for ind, i in enumerate(v) if ind == 2 or ind == 5 or ind == 19 or ind == 92]))
 
 # Enumerate() ger en enumerating objekt vilket är objektet och en counter (index)
