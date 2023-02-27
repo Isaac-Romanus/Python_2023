@@ -5,6 +5,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Creating a vector with 100 values related to pi and empty list to store values in
 angle = np.linspace(math.pi/4, 9*math.pi/4, 100)
 xb, yb, xy, yy, xk, yk, xg, yg, xr, yr = [],[],[],[],[],[],[],[],[],[]
 
@@ -25,11 +26,12 @@ for i in range(100):
     xr.append(math.cos(angle[i])*0.9 + 4)
     yr.append(math.sin(angle[i])*0.9)
     
-
+# Adding the figures to plot
 plt.plot(xb,yb, "b")
 plt.plot(xy,yy, "y")
 plt.plot(xk,yk, "k")
 plt.plot(xg,yg, "g")
 plt.plot(xr,yr, "r")
 
+# Showing all figures in one plot
 plt.show()
