@@ -31,7 +31,7 @@ plt.plot(xb,yb, "b")
 plt.plot(xy,yy, "y")
 plt.plot(xk,yk, "k")
 plt.plot(xg,yg, "g")
-plt.plot(xr,yr, "r")
+plt.plot(xr,yr, "r:")
 
 # Showing all figures in one plot
 plt.show()
