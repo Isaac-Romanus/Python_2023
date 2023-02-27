@@ -23,12 +23,20 @@ class Point:
     def Sfäriska(self):
         # Returns the Spherical coordinates 
         r = math.sqrt(self.x_value**2 + self.y_value**2 + self.z_value**2)
-        f = math.acos(self.z_value,r)
+        f = math.acos(self.z_value/r)
         o = math.atan2(self.x_value,self.y_value)
         
         coord = (r, o, f)
         return coord 
     
     def __str__(self):
-        return f"Detta objektet har id {id(self)}"
+        # Presents information on the objekt, id and values
+        return f"Detta objektet har id {id(self)}"\
+            f", x = {self.x_value}, y = {self.y_value}, z = {self.z_value}" 
 
+test= Point(2,2,2)
+print(test.Avstånd())
+print(test.Sfäriska())
+print(f" {test}")
+
+# Det som skiljer artan2 från atan är att den tar hänsyn till förtecken
