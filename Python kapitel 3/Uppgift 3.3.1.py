@@ -35,3 +35,6 @@ plt.plot(xr,yr, "r")
 
 # Showing all figures in one plot
 plt.show()
+
+# Plot() tar kordinater, färg-markör-linjestil, och andra egenskaper
+# kan använda subplot om man vill ha dem separerat men ändå i samma show.

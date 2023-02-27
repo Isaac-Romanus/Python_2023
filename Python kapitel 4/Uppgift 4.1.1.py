@@ -37,6 +37,8 @@ class Point:
 test= Point(2,2,2)
 print(test.Avstånd())
 print(test.Sfäriska())
-print(f" {test}")
+print(test)
 
 # Det som skiljer artan2 från atan är att den tar hänsyn till förtecken
+# Python har inte sann inkapsling
+# __str__ är en strängrepresentation av objektet
