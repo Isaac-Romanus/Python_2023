@@ -69,6 +69,7 @@ class Student:
                 for i in range(len(Student.L)): # Loop through all the students changing the instance variables into multi dim list
                     add = [i+1, getattr(Student.L[i], "_name"), getattr(Student.L[i], "_surname"), getattr(Student.L[i], "_age")]
                     table.append(add)
+                    
                 table.reverse # As they are added in order the list has to be reversed
                 print(tb.tabulate(table, headers, tablefmt="grid"))
                 continue # Back to menu
