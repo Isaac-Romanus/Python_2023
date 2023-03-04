@@ -88,4 +88,4 @@ Student.adjust_list() # Testing the classmethod
 
 
 # Kommer inte bli sann inkapsling utan man kan komma åt det med obj._Student.__name
-# Lambda är amonym function
+# Lambda är amonym function, alltså att den endast innehåller en return-sats
