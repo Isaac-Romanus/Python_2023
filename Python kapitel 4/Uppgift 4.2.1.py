@@ -5,6 +5,7 @@
 # en meny så att användaren kan 1) Lägga till ett nytt objekt till listan, 2) Ta bort objekt med 
 # visst namn, 3) sortera objekten i listan med namn, efternamn, eller ålder, och 4) skriva ut en 
 # formaterad tabell med information om studenterna.
+from tabulate import tabulate as tb
 
 class Student:
     L = []
@@ -71,6 +72,7 @@ class Student:
                     Student.L = sorted(Student.L, key=lambda x: x._age)
                     
             if slct == 3:
+                
                 
                     
             if slct == 4:
