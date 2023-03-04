@@ -18,11 +18,11 @@ class Person: # Create a Class
         self.id = Person.count # Defining an "id" for "närvarande personer"
         
     def __str__(self): # Defining how the class is treated in string definition, ex print
-        print(f"Personen heter {self.name} {self.surname} och är {self.age} år gammal")
+        return f"Personen heter {self.name} {self.surname} och är {self.age} år gammal"
     
     @classmethod # Creating a method to look up how many "Person" objekts have been instansieted
     def count_person(cls):
-         print(f"Det har instansierats {Person.count} hittills")
+        print(f"Det har instansierats {Person.count} hittills")
 
 # Creating som test objects
 Person("isaac","Thiria","25") 
