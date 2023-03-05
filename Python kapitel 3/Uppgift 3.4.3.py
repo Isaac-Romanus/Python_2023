@@ -10,9 +10,8 @@
 
 import math
 import scipy as sp
-from scipy.integrate import odeint
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Skapar en exempelfunktion att använda i beräkningarna
 def f(x,y):
@@ -38,7 +37,7 @@ def diff_ekv_grad1(funktion, gränsvärden, C, steglängd):
         xi = x # Uppdaterar xi och yi som representerar värderna från tidigare iteration
         yi = y
         
-    print(f"y_värdet är \t {y_list} för \t - {x_list}") # print för att kunna jämföra så att funktionen gör rätt beräkning
+    # print(f"y_värdet är \t {y_list} för \t - {x_list}") # print för att kunna jämföra så att funktionen gör rätt beräkning
     return x_list, y_list
         
 test = diff_ekv_grad1(f, (0.0, 2.1), 5, 0.1)
