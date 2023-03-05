@@ -42,4 +42,7 @@ def diff_ekv_grad1(funktion, gränsvärden, C, steglängd):
         
 test = diff_ekv_grad1(f, (0.0, 2.1), 5, 0.1)
 plt.plot(test[0], test[1])
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Figur för Heuns metod")
 plt.show()
