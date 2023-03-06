@@ -1,8 +1,9 @@
 # Uppgift 4.4.1 (1 p)
 
 # Först, skapa en klass Person innehållandes instansvariablerna namn och 
-# personnummer, samt implementationer av metoderna __init__ och __str__. Sedan, 
-# skapa en underklass Bilist som ärver Person och lägger till instansvariabeln 
+# personnummer, samt implementationer av metoderna __init__ och __str__. 
+# 
+# Sedan, skapa en underklass Bilist som ärver Person och lägger till instansvariabeln 
 # körkortsnivå (=”B”,”C”, etc). Metoderna __init__ och __str__ skall överlagras på 
 # lämpligt sätt. Sist, definiera en funktion/metod harKörkort som kan särskilja objekt av typen 
 # Person och Bilist, utan att använda type eller if.
@@ -20,7 +21,7 @@ class person: # definierar klassen person med sina instansvariabler
 
 class bilist(person): #definierar klassen bilist som får ärva argumenten från klassen person
     def __init__(self, namn, personnummer, körkort="B"):
-        super().__init__(namn, personnummer) # super ger ett temporrärt objekt av superclassen så man även kan kalla dessmethoder
+        super().__init__(namn, personnummer) # super ger ett temporrärt objekt av superclassen(här person) så man även kan kalla dess methoder
         self.card = körkort
         
     def har_korkort(self): # Polymorfismen där den här istället säger att man är bilist och vilken grad man har
@@ -29,6 +30,10 @@ class bilist(person): #definierar klassen bilist som får ärva argumenten från
 # Skapar två test-objekt
 a = bilist("Isaac", "121212", "B")
 b = person("Torun", "040404")
+
+# Testar print
+print(a)
+print(b)
 
 # Testar instansmetoden för de två testobjekten med .methodnamn()
 a.har_korkort()

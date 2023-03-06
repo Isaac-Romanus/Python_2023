@@ -15,19 +15,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Skapar en exempelfunktion att använda i beräkningarna
-def f(x,y):
-    return -20*y + 7*math.exp(-0.5*x)
+f = lambda t, s: np.cos(t)
 
 def diff_ekv_grad1(funktion, gränsvärden, C, steglängd): 
     # Skapar en funktion med argument för funktion, gränsvärde, y(a) och steglängd, gränsvärden anges som tuple
-    y_list = [] # Listor för att spara x och y värden som returneras
-    x_list = []
+    y_list = [C] # Listor för att spara x och y värden som returneras
+    x_list = [gränsvärden[0]]
     n = round((gränsvärden[1] - gränsvärden[0])/steglängd) # antal interationer där lösningen skall hittas
     
     xi = gränsvärden[0] # Startvärden för x respektive y
     yi = C
     
-    for i in range(n+1): # En loop som beräknar första intermediate y värde och sedan en approximation vid nästa punkt
+    for i in range(1,n+1): # En loop som beräknar första intermediate y värde och sedan en approximation vid nästa punkt
         p = yi + steglängd*funktion(xi, yi) # intermediat värdet
         x = gränsvärden[0] + i*steglängd
         y = yi + (steglängd/2)*((funktion(xi,yi)) + funktion(x,p)) # Final approximation
@@ -41,7 +40,7 @@ def diff_ekv_grad1(funktion, gränsvärden, C, steglängd):
     # print(f"y_värdet är \t {y_list} för \t - {x_list}") # print för att kunna jämföra så att funktionen gör rätt beräkning
     return x_list, y_list
         
-test = diff_ekv_grad1(f, (0.0, 2.1), 5, 0.1)
+test = diff_ekv_grad1(f, (0.0, np.pi), 0, 0.1)
 plt.plot(test[0], test[1])
 plt.xlabel("x")
 plt.ylabel("y")
@@ -51,7 +50,7 @@ plt.title("Figur för Heuns metod")
 # Test with scipy
 y_list = [] # Listor för att spara x och y värden som returneras
 x_list = []
-n = round((2.1 - 0.0)/0.1) # antal interationer där lösningen skall hittas
+n = round((np.pi - 0.0)/0.1) # antal interationer där lösningen skall hittas
     
 xi = 0.0 # Startvärden för x respektive y
 yi = [5]
@@ -61,8 +60,10 @@ for i in range(n+1): # En loop som beräknar första intermediate y värde och s
     x_list.append(x)
 
 # numpy.arange([start, ]stop, [step, ]dtype=None, *, like=None)
-t_eval = np.arange(0, 2.1, 0.1)
-test = solve_ivp(f, [0,2.1], [5], method='RK45', t_eval=t_eval)# odeint(f, y0, x_list)
+# solve_ivp(fun, t_span, y0, method='RK45', t_eval=None)
+t_eval = np.arange(0, np.pi, 0.1)
+test = solve_ivp(f, [0, np.pi], [0], t_eval=t_eval)
+
 
 print(x_list)
 plt.plot(test.t, test.y[0], "r")

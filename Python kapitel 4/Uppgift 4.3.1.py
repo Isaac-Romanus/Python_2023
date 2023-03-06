@@ -22,12 +22,15 @@ class Person: # Create a Class
     
     @classmethod # Creating a method to look up how many "Person" objekts have been instansieted
     def count_person(cls):
-        print(f"Det har instansierats {Person.count} hittills")
+        print(f"Det har instansierats {Person.count} personer hittills")
 
 # Creating som test objects
-Person("isaac","Thiria","25") 
+isaac = Person("isaac","Thiria","25") 
 Person("Sofia","Olsson","26")
 Person("Viggo","Thiria","15")
+
+# Testing the __str__ instansmetod
+print(isaac)
 
 # Testing the classmethod
 Person.count_person()

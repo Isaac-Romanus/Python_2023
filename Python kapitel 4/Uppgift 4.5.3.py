@@ -47,7 +47,7 @@ class matrix():
 # Testar instansmetoden för determinanten
 det_test = [[1,1,1,-1], [1,1,-1,1], [1,-1,1,1], [-1,1,1,1]]
 det_test = matrix(det_test)
-print(det_test.DET())
+print(f"Nu testar vi DET instansmetoden {det_test.DET()}\n")
 
 # Testar operationerna
 ettor = np.ones((4,4))
@@ -56,10 +56,10 @@ ett_16 = matrix([np.linspace(1,4,4), np.linspace(5,8,4), np.linspace(9,12,4), \
     np.linspace(13,16,4)])
 
 sum = ettor@ett_16
-# sum = print(matrix(sum))
+print(f"nu testar vi operatören + \n{matrix(sum)}\n")
 
 # Testar instansmetoden för transposition
-print(f"{np.array(ett_16.T())} \n \n {ett_16}")
+print(f" nu testar vi instansmetoden för transposition \n{np.array(ett_16.T())} \n \n {ett_16}\n")
 
 # Determinanten beräknas stegvis med att man först tar determineanten från 3x matrixes 
 # vilka i sin tur kräver 2x och de frå man genom send multi. sedan varannan add - sub.

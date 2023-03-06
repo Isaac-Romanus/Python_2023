@@ -35,7 +35,7 @@ class Student:
             if slct == 0: # Adding a new student in the form of a long string that is split an put in as arguemnts
                 student = str(input("Ange ny student med formatet: namn,efternamn,ålder: "))
                 student_l = student.split(",")
-                print(f"Ny student{Student(student_l[0], student_l[1], student_l[2])}")
+                print(f"Ny student {Student(student_l[0], student_l[1], student_l[2])}")
                 continue # Back to the menu
             
             if slct == 1: # Removing a Student based on a given name
@@ -49,8 +49,8 @@ class Student:
             if slct == 2: # Sorting the students in the list
                 sort = int(input("\nHur önskar du sortera listan?\n"\
                     "0 - Sortering med Förnamn \n "\
-                        "1 - Sortering med Efternamn  \n "\
-                            "2 - Sortering med Ålder  \n "))
+                        "1 - Sortering med Efternamn  \n"\
+                            "2 - Sortering med Ålder  \n"))
                 
                 # Sorting according to anonymous function lambda, which selects which instancevariable to adjust for
                 if sort == 0:

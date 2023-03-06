@@ -19,7 +19,7 @@
 5) A = delete(A,[8,9],axis = 1)
 # numpy.delete ger en ny array med sub-arrayer längs den borttagna axisen. 
 # Andra argumentet: "obj", indicerar vilka som skall tas bort.
-# Här är axis 1 vilket indicerar vertikal borttagning, column 8 och 9? 
+# Här är axis 1 vilket indicerar horisontell borttagning, column 8 och 9? 
 # Objektet här är i form av två columner 8 och 9 och i och med start på 0 blir det de yttersta 
 # columnerna, har kvar 8x8 med nollor
 
